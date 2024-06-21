@@ -23,7 +23,7 @@ $env:Path = "$env:QTDIR\bin;$env:Path"
 
 windeployqt.exe --release --qmldir ../../GlosSIConfig/qml ./GlosSIConfig.exe
 
-Get-ChildItem -Path "..\..\..\" -Recurse -Include "ViGEmBusSetup_x64.exe","HidHideSetup.exe","vc_redist.x64.exe","THIRD_PARTY_LICENSES.txt","QT_License","SteamTweaks"
+Get-ChildItem -Path "..\..\..\" -Recurse -Include "ViGEmBusSetup_x64.exe","HidHideSetup.exe","vc_redist.x64.exe"
 
 # Copy-Item "..\..\deps\SFML\out\Release\lib\sfml-graphics-2.dll" -Destination "."
 # Copy-Item "..\..\deps\SFML\out\Release\lib\sfml-system-2.dll" -Destination "."
