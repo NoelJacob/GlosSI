@@ -23,20 +23,22 @@ $env:Path = "$env:QTDIR\bin;$env:Path"
 
 windeployqt.exe --release --qmldir ../../GlosSIConfig/qml ./GlosSIConfig.exe
 
-Copy-Item "..\..\deps\SFML\out\Release\lib\sfml-graphics-2.dll" -Destination "."
-Copy-Item "..\..\deps\SFML\out\Release\lib\sfml-system-2.dll" -Destination "."
-Copy-Item "..\..\deps\SFML\out\Release\lib\sfml-window-2.dll" -Destination "."
-Copy-Item "..\..\GlosSIConfig\GetAUMIDs.ps1" -Destination "."
-Copy-Item "..\..\HidHideSetup.exe" -Destination "."
-Copy-Item "..\..\ViGEmBusSetup_x64.exe" -Destination "."
-Copy-Item "..\..\vc_redist.x64.exe" -Destination "."
-Copy-Item "..\..\LICENSE" -Destination "./LICENSE"
-Copy-Item "..\..\QT_License" -Destination "./QT_License"
-Copy-Item "..\..\THIRD_PARTY_LICENSES.txt" -Destination "./THIRD_PARTY_LICENSES.txt"
-Copy-Item "..\..\SteamTweaks\dist" -Destination "./SteamTweaks" -Recurse
+Get-ChildItem -Path "..\..\..\" -Recurse -Include "ViGEmBusSetup_x64.exe","HidHideSetup.exe","vc_redist.x64.exe","THIRD_PARTY_LICENSES.txt","QT_License","SteamTweaks"
 
-
-# 7z a GlosSI-snapshot.zip *
-
-cd ../..
+# Copy-Item "..\..\deps\SFML\out\Release\lib\sfml-graphics-2.dll" -Destination "."
+# Copy-Item "..\..\deps\SFML\out\Release\lib\sfml-system-2.dll" -Destination "."
+# Copy-Item "..\..\deps\SFML\out\Release\lib\sfml-window-2.dll" -Destination "."
+# Copy-Item "..\..\GlosSIConfig\GetAUMIDs.ps1" -Destination "."
+# Copy-Item "..\..\HidHideSetup.exe" -Destination "."
+# Copy-Item "..\..\ViGEmBusSetup_x64.exe" -Destination "."
+# Copy-Item "..\..\vc_redist.x64.exe" -Destination "."
+# Copy-Item "..\..\LICENSE" -Destination "./LICENSE"
+# Copy-Item "..\..\QT_License" -Destination "./QT_License"
+# Copy-Item "..\..\THIRD_PARTY_LICENSES.txt" -Destination "./THIRD_PARTY_LICENSES.txt"
+# Copy-Item "..\..\SteamTweaks\dist" -Destination "./SteamTweaks" -Recurse
+#
+#
+# # 7z a GlosSI-snapshot.zip *
+#
+# cd ../..
 

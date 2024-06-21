@@ -37,20 +37,20 @@ jobs:
       - name: Prebuild
         shell: pwsh
         run: |
-          .\prebuild.ps1 || .\prebuild.ps1
+          .\prebuild.ps1
 
       - name: Build
         shell: pwsh
         run: |
-          .\build.ps1 || .\build.ps1
-
-      - name: Bundle
-        shell: pwsh
-        run: |
-          .\bundle-zip.ps1
-
-      - name: Upload to Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          path: ./x64/Release/GlosSI-snapshot.zip
-          retention-days: 5
+          .\build.ps1
+#
+#      - name: Bundle
+#        shell: pwsh
+#        run: |
+#          .\bundle-zip.ps1
+#
+#      - name: Upload to Artifact
+#        uses: actions/upload-artifact@v4
+#        with:
+#          path: ./x64/Release/GlosSI-snapshot.zip
+#          retention-days: 5
