@@ -23,13 +23,9 @@ $env:Path = "$env:QTDIR\bin;$env:Path"
 
 windeployqt.exe --release --qmldir ../../GlosSIConfig/qml ./GlosSIConfig.exe
 
-$files = @("sfml-graphics-2.dll", "sfml-system-2.dll", "sfml-window-2.dll", "GetAUMIDs.ps1", "HidHideSetup.exe", "ViGEmBusSetup_x64.exe", "vc_redist.x64.exe", "LICENSE", "QT_License", "THIRD_PARTY_LICENSES.txt", "SteamTweaks")
-
-Get-ChildItem -Path "..\..\" -Recurse -Include $files
-
-Copy-Item "..\..\deps\SFML\out\Release\lib\RelWithDebInfo\sfml-graphics-2.dll" -Destination "."
-Copy-Item "..\..\deps\SFML\out\Release\lib\RelWithDebInfo\sfml-system-2.dll" -Destination "."
-Copy-Item "..\..\deps\SFML\out\Release\lib\RelWithDebInfo\sfml-window-2.dll" -Destination "."
+Copy-Item "..\..\deps\SFML\out\Release\lib\sfml-graphics-2.dll" -Destination "."
+Copy-Item "..\..\deps\SFML\out\Release\lib\sfml-system-2.dll" -Destination "."
+Copy-Item "..\..\deps\SFML\out\Release\lib\sfml-window-2.dll" -Destination "."
 Copy-Item "..\..\GlosSIConfig\GetAUMIDs.ps1" -Destination "."
 Copy-Item "..\..\HidHideSetup.exe" -Destination "."
 Copy-Item "..\..\ViGEmBusSetup_x64.exe" -Destination "."
